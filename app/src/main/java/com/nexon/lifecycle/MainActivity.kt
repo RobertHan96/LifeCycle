@@ -19,6 +19,12 @@ class MainActivity : BaseActivity() {
         super.onResume()
         Log.d("MainActivity", "onResume실행")
     }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("MainActivity", "onPause실행")
+    }
+
     override fun setupEvents() {
         nextBtn.setOnClickListener {
             val myIntent = Intent(mContext, NextActivity::class.java)
